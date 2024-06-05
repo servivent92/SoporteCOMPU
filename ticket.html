@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="tituloDoc">ServiVENT-Documento</title>
+    <link rel="stylesheet" href="css/estilos_ticket.css">
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    <script type="text/javascript" src="js/imprimir.js"></script>
+</head>
+
+<body class="body">
+
+    <div class="content"> 
+        
+        <div class="doc_btn">
+            <!--<div >
+                <a id="btnSendWa" href="" style="align-items: start;" onclick="openWhatsApp()" class="btn">Mandar por Whatsapp</a>
+            </div>-->
+            <div >
+                
+                <a id="btnPrint" href="#" style="background-color: #0d6efd;" onclick="printTicketPDF()" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="#FFFFFF" class="bi bi-printer-fill" viewBox="0 0 16 16">
+                    <path d="M5 1a2 2 0 0 0-2 2v1h10V3a2 2 0 0 0-2-2zm6 8H5a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1"/>
+                    <path d="M0 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1v-2a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2H2a2 2 0 0 1-2-2zm2.5 1a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1"/>
+                  </svg> Imprimir</a>
+            </div>
+        </div>
+
+        <div class="principal">
+
+            <div class="botones">
+                <div class="botonDoc">
+                    
+                </div>
+            </div>
+
+            <div class="card">
+
+                <div class="card__perfil" id="ticket">
+
+                    <div class="card__nombre">
+                        <!--https://drive.google.com/uc?export=download&id=1qqu8zDpTILtZFYBVfcHQFPLbJmyPSiJz-->
+                        <img alt="" src="" id="logo">
+                        <h1 class="empresa" id="empresa">EMPRESA</h1>
+                        <a id="direccion">Direccion</a>
+                        <h2 class="numeroRegistro" id="numeroRegistro">Numero Registro</h2>
+                        <a class="fecha" id="fecha">Fecha</a>
+                    </div>
+                    <div class="cliente">
+                        <b>Cliente:</b> <label class="cliente" id="nombreCliente">Nombre del Cliente</label>
+                        
+                    </div>
+                    <hr>
+                    <div class="card__descripcion">
+
+                        <table class="tabla" id="tablaProductos">
+                            <tr class="cabecera">
+                                <th >Can.</th>
+                                <th >Producto</th>
+                                <th >Precio</th>
+                            </tr>
+                        </table>
+                        
+                        <div class="total">
+                            <b>Sub Total: </b> 
+                            <label class="precio" id="subTotal">0</label>
+                        </div>
+                        <div class="total">
+                            <b>Descuento: </b> 
+                            <label class="precio" id="descuento">0</label>
+                        </div>
+                        <div class="total">
+                            <b>Total: </b> 
+                            <label class="precio" id="totalPrecio">0</label>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="card__button">
+                        
+                        
+                        <p>GRACIAS POR SU PREFERENCIA</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/imprimir.js"></script>
+    <script src="js/recibe_datos_Ticket.js"></script>
+
+</body>
+
+</html>
